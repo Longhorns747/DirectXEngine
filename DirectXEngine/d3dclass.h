@@ -17,7 +17,6 @@
 #include <d3dcommon.h>
 #include <d3d11.h>
 #include <DirectXMath.h>
-using namespace DirectX;
 
 ////////////////////////////////////////////////////////////////////////////////
 // Class name: D3DClass
@@ -38,9 +37,9 @@ public:
 	ID3D11Device* GetDevice();
 	ID3D11DeviceContext* GetDeviceContext();
 
-	void GetProjectionMatrix(XMMATRIX&);
-	void GetWorldMatrix(XMMATRIX&);
-	void GetOrthoMatrix(XMMATRIX&);
+	void GetProjectionMatrix(DirectX::XMMATRIX&);
+	void GetWorldMatrix(DirectX::XMMATRIX&);
+	void GetOrthoMatrix(DirectX::XMMATRIX&);
 
 	void GetVideoCardInfo(char*, int&);
 
@@ -56,9 +55,9 @@ private:
 	ID3D11DepthStencilState* m_depthStencilState;
 	ID3D11DepthStencilView* m_depthStencilView;
 	ID3D11RasterizerState* m_rasterState;
-	XMMATRIX m_projectionMatrix;
-	XMMATRIX m_worldMatrix;
-	XMMATRIX m_orthoMatrix;
+	DirectX::XMMATRIX m_projectionMatrix;
+	DirectX::XMMATRIX m_worldMatrix;
+	DirectX::XMMATRIX m_orthoMatrix;
 };
 
 #endif
